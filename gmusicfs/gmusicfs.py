@@ -171,9 +171,10 @@ class MusicLibrary(object):
                     'No deviceId could be read from config file'
                     ': %s' % cred_path)
 
+
         self.api = GoogleMusicAPI(debug_logging=self.verbose)
         log.info('Logging in...')
-        self.api.login(username, password, devideId)
+        self.api.login(username, password, deviceId)
         log.info('Login successful.')
 
     def __aggregate_albums(self):
